@@ -1,0 +1,108 @@
+********** Selenium Class-01 ************
+
+
+1.What is Software Testing?
+---identify correctness and quality of the application
+
+2.Ways you can test an application?
+  a.Manual
+  b.Automation
+
+3.Whats the need of automation testing?
+--- Makes life easier
+---saves time
+---
+
+4.What are the tools that you can use for Automation ?
+--Selenium
+--cucumber
+--TestNG
+--Katlon Studio
+--Uft
+
+5.Types of Testing?
+--Functional;
+--Non Functional
+
+6.What is selenium?
+--Selenium is a tool
+--that help us to automate webApplication
+--It is mainly used for Functional Testing.
+
+
+7.Components of Selenium.
+-- Selenium IDE
+-- Selenium WebDriver
+-- Selenium Grid
+-- Selenium RC
+
+8.What is Selenium WebDriver?
+--It is a tool that allows us to perform actions on a WebApplication.
+--It is an Interface.
+
+
+9.Advantages:
+--Open Source
+--it works with multiple languages
+--Works with multiple browsers
+--Os independent
+
+
+10.Disadvantages :
+
+-- No technical support
+-- Can not test Dektop applications
+-- No built in reports
+-- Can not test  Captchas , images , videos
+
+
+
+
+
+TASK1:
+
+OPEN UP GOOGLE.com
+using selenium Webdriver;
+
+
+Steps:
+1.
+
+
+
+
+Q.difference between  driver.quit() and driver.close()
+-- close() --> it will close the current tab only
+-- quit() ---> it will quit thw whole browser
+
+
+
+			Comparison
+
+driver.get()  =======  driver.navigate().to()
+
+
+-- driver.get() is going to wait for the page to fully load before proceeding further
+where as driver.navigate() will not wait for the page to fully load
+
+
+-- navigate() keeps the history of the browser.
+--- navigate() allows you to move forward , backward and refresh the page
+additional option we get with navigate();
+driver.navigate().back();
+driver.navigate().forward();
+driver.navigate().refresh();
+
+
+
+
+fullscreen() vs maximize()
+-- maximize() will maximize the browser and you will still be able to see url, tabs, bookmarks
+    and fullscreen() will maximize the whole web application
+
+
+
+
+
+
+
