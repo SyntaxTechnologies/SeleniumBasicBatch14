@@ -1,0 +1,134 @@
+*********Selenium CLass02***********
+
+------------------------HTML----------------
+All the webapplication
+are developed using Html.
+
+
+HTML---->
+
+tags:
+
+<html>
+	<body>
+		<button> heelo </button>
+	</body>
+</html>
+
+
+
+---------------------WebElement-----------------
+
+WebElement:
+Anything you see on website is called a webElement
+
+Some common WebElements:
+
+1.Text Boxes
+2.Radio Buttons
+3.CheckBoxes
+4.Calendars
+5.Drop Downs
+6.Tables
+
+
+-------------------------Atrributes----------------:
+
+<button>My button</button>
+text is written between the opening and closing tags.
+
+
+<button  class="abc" ,id= "Butn">my button </button>
+
+what ever we have inside the tag is called attribute
+
+what is the value of the attribute class---> answer: "abc"
+what is the value of the attribute id --> answer: "Butn"
+
+
+----------------------------Locators----------------------------------
+Locators:
+locators help us find a particular webElement on the page
+
+- ID
+- Name
+- ClassName
+- linktext
+- partialLinkText
+- Tagname
+- xpath
+- CSS Selector
+
+the purpose of having multiple locators is because
+some tags might not have an id (u can use another locator)
+
+two webElements have a common locator  (e.g  <input id="box" ,name="textbox"/>
+ 											, <input id="box",class= "btn" )
+
+
+----------------------------------DOM-------------------------
+What is DOM?
+DOM stands for Document Object Model. It is the browser's
+internal view of the webpage.
+Also called as Developer's tools, or Dev tools
+Document --> can be stored any document as pdf, excel
+Object --> any line in HTML is considered as Object
+Model --> it is just a layout of the HTML
+
+--------------------------anchor tag---------
+<a> --> anchor tag
+usually the links are placed in this tag
+ if there is a text in the <a > tag then u can use linktext locator
+
+
+--------------------------NOSUCH ELEMENT EXCEPTION---------
+ NOSUCH ELEMENT EXCEPTION:
+ occurs when the Driver is unable to find the element on the page
+ 1.the locator is wrong
+ 2.the element is not on that page.
+
+
+
+-----------Duplicate Values of attributes---------
+
+
+<input id="box" ,name="Username"/> -->Username Box
+<input id="box",class= "password"/>  -->Password Box
+
+for the sake of example:
+driver.findElement(By.id("box")).sendKeys("heelo");
+
+driver is going to go in the DOM from top to botton , the first tag with id box will be picked and
+keys will be sent to that.
+
+
+--------------------------HW-----------------------
+
+
+navigate to https://parabank.parasoft.com/parabank/register.htm;jsessionid=B8DD31FF0AFEDBDF4454B27BBC5C05B0%22
+fill out the form
+click on register
+close the browser
+
+navigate to fb.com
+click on create new account
+fill up all the textboxes
+click on sign up button
+close the pop up
+close the browser
+
+
+-------------------------------RECAP--------------------------------
+
+1.locators--> id,name,class,partialLinkText, linktext
+
+2.linktext--->only when we have a link tag <a> and it has some text
+3.partail and link text --> using partial u can enter just a part of the text
+4.if there is numbers in the value of the locators .. should u use it? (avoid it)
+5.No such element element -->1.the locator is wrong, 2. the element is on the page
+6 send the text and perform click operation
+
+
+
+
+
