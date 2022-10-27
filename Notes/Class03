@@ -1,0 +1,107 @@
+*********************Selenium Class03******************************
+
+Locators:
+-----------------------------------Absolute Xpath-------------------------------
+Xpath :
+ 1.Absolute
+ 2.Relative
+
+
+ Absolute Xpath:
+                starts with starting node html and then you proceed in the hirearchy
+
+Example:
+<html>
+    <head>
+        <title>My Web</title>
+    </head>
+    <body>
+        <button>Press ME</button>
+ 		<input> text</input>
+        <div>
+ 			<input>box</input>
+ 		</div>
+ 		<div>
+            <input>box</input>
+        </div>
+    </body>
+</html>
+
+
+Answer:
+/html/body/div[2]/input
+
+
+reasons not used often:
+1.too long, complicated
+2.If there is any addition in the hirearchy there is a possibility that the path isnt valid any more
+
+
+
+----------------------------------------------Relative Xpath----------------------------------------
+
+Syntax for relative xpath:
+1.-----Xpath to identify by attribute------
+//tagname[@attribute='attribute value']
+
+english :get me the 'tagname'  which has  an 'attribute' whose value is 'attribute value'
+
+
+Example:
+
+<input id="box",class="white">box</input>
+
+xpath:
+//input[@id='box']
+
+english :get me the tag "input" which has an attribute "id" whose value is "box"
+
+
+2.-----Xpath to identify by text------
+//tagname[text() = 'text value']
+
+english: get me the tagname which has text that is "text value"
+
+example:
+//a[text()='Forgotten password?']
+
+english: get the tag a which has a text that is "forgotten password?"
+
+
+3.----Xpath to identify by contains Method------
+
+****for attributes****
+//tagname[contains(@attribute, 'partial attribute value')]
+
+english :
+get me the tag name  which has the attribute and the attribute value contains "the partial value"
+
+Example:
+//button[contains(@type , 'sub')]
+
+english : get me the tag button which has the attribute and the attribute value contains "sub"
+
+use case:
+1.long attribute value
+2. some part is dynamic of the attribute value   id="textBoxhighlighted125" we can simply skip the part that is dynamic
+
+
+****for text****
+//tagname[contains(text(), 'partial text value')]
+
+example:
+//a[contains(text(),'Forgot')]
+
+english:get me the tag button which has the text and the text  value contains "Forgot"
+
+4.-----Xpath to identify by starts with------
+
+Syntax:
+//tagname[starts-with(@attribute, 'partial starting attribute value')]
+
+example:
+//input[starts-with(@name,'pa')]
+
+
+
+-------------------------------------------------------------------------------
