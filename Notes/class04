@@ -1,0 +1,57 @@
+***************CSS Selector (Cascading Styling Sheet)**********************
+
+it is another way of locating elements on the webpage
+
+*Syntax:
+tagname[attribute = 'attribute value']
+
+button[type = 'submit']
+
+CSS does not give an opportunity to locate an element by its text
+
+**Shorcuts for CSS:
+*Shortcut for className --> "."
+
+*Syntax: tagname.classNameValue
+        input.form-control
+
+*Shortcut for ID -- "#"
+    Syntax: tagname#IDValue
+            input#twotabsearchtextbox
+
+*contains() method in css:
+        '*' symbol represents contains method
+        tagname[attribute *= 'partial attribute value']
+        input[placeholder *= 'Email']
+
+*starts-with method in css:
+        ^ symbol represents starts with method in css
+        tagname[attribute ^= 'starting attribute value']
+        input[type ^= 'password']
+
+*ends-with method in css:
+        $ symbol represents ends-with method in css
+        tagname[attribute $= 'ending attribute value']
+        img[src $= 'syntax.png']
+**************************************************************************
+***********************WebElement Commands********************************
+WebElement Commands:
+consist of several methods where we can perform actions and get element state
+on the webpage
+return type :boolean -----isEnabled()--> check if the radio button can be selected or not  (if not selectable usually it is greyed out.
+return type :boolean -----isSelected()-->checks if the radio button is selected or not (return true if selected)
+return type :boolean -----isDisplayed() --> checks if the webElment is displayed on the page or not
+
+return type  :void----clear() --> to clear the text box
+return type  :String value   -->getText() -- to get the text from the webElement (only works if text is there)
+return type  :String value   -->getAttribute("attribtueName") -- to get the value of any attribute from the WebElement
+
+
+**************************************************************************
+**************************FinElements*************************************
+
+Driver.FindElements() --> when we want to access mutliple WebElements from a website
+return type: list of WebElements
+
+
+
