@@ -1,0 +1,73 @@
+****************************CheckBoxes*****************************
+Handling checkboxes
+-- if you have only 1 checkbox - you can just click on it
+-- if you have multiple choices - store them in List and loop through and select the one that u desire .
+*******************************************************************
+****************************DropDowns*****************************
+Dropdown is a menu which gives us an opportunity to select one or
+multiple options
+
+Types of dropdowns:
+1. Single select
+2. Multiple select
+
+Handling dropdowns:
+Note :      using Select class
+            in order to use Select class
+            we need to make sure our dropdown has
+            select tag
+
+Steps to select using Select Class
+1.find the WebElement that is having the select tag---> WebElement DD=driver.findWebElement(By.xapth("//select[@id='singleSelect']));"
+2.in order to use select class--->Select sel=new Select(WebElement DD);
+3.now u can use methods available to u in select class to select any option from drop down
+
+Selecting an option from dropdown can be done in 3 ways using select tag:
+a)sel.selectByIndex(int index)--> where index is the index of option  (starts from 0)
+b)sel.selectByValue(string Value)--> where Value is the value of attribute "value" in the DOM
+c)sel.selectByVisibleText(String text)--> Where text is the text in the option tag
+
+Rememeber:
+in order to get all available options using select class u can use
+sel.getallOptions() --> returns u a list of  WebElements
+
+
+
+Note: SIngle select and multiSelect DropDown works in the same manner the only difference is that
+we can also Deselect from a multiDropDown;
+
+In order to deselect any option in Multi Select dropdown:
+-- Make sure your DD is multiple select  ->.isMultiple() can be used for this (returns a boolean)
+deselectByValue()
+deselectByVisibleText()
+deselectByIndex()
+deselectAll()
+
+******************************************************************************
+*************************Advance Xpath****************************************
+we have to use relations to get to the desired WebElement
+following-sibling
+preceding-sibling
+
+Approach:
+1.look for the closest approachable Webelement
+2.Write down the xpath to get to the closest approachable
+3.FInd relationship between closest approachable and our desired one ( add it to xpath)
+
+Example:
+<table class="drop-Down">
+
+`<option value="Sunday">Sunday</option>
+`<input  id="3 3 3 "  class= "33  33 333"/>
+`<option value="Monday">Monday</option>
+`<option value="Tuesday">Tuesday</option>
+`<option value="Wednesday">abc</option>
+`<option value="Thursday">Thursday</option>
+
+</table>
+
+syntax:
+//tagname[@attribute = 'attribute value']/following-sibling::tagname
+Answer:
+//option[@value='Sunday']/following-sibling::input
+

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 
 public class DropDownDemo {
     public static void main(String[] args) throws InterruptedException {
@@ -33,7 +35,19 @@ public class DropDownDemo {
 //     select by value
         select.selectByValue("Sunday");
 
+//        get all the options available in the dropdown
 
+        List<WebElement> options = select.getOptions();
 
+//        traverse through the options
+        for(int i=0;i<options.size();i++){
+
+            WebElement option = options.get(i);
+            String text = option.getText();
+            if(text.equalsIgnoreCase("Friday")){
+                select.selectByIndex(i);
+            }
+
+        }
     }
 }
