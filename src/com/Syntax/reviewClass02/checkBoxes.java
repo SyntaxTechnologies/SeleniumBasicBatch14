@@ -25,7 +25,7 @@ public class checkBoxes {
 
             String color = checkBx.getAttribute("value");
 
-            if(color.equalsIgnoreCase("orange")){
+            if(color.equalsIgnoreCase("blue")){
                 checkBx.click();
                 break;
             }

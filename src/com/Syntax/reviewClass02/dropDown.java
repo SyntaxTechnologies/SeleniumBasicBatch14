@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class dropDown {
     public static void main(String[] args) throws InterruptedException {
         //       setting up the webDriver
@@ -53,6 +55,15 @@ public class dropDown {
         selectMonth.selectByVisibleText("Aug");
 
 //        print all the available months in the console
+//        gets u all the available options in the dropDown
+        List<WebElement> Options = selectMonth.getOptions();
+//        traverse through the loop and print each WebElement
+        for(int i=0;i<Options.size();i++){
+
+            String months = Options.get(i).getText();
+            System.out.println(months);
+
+        }
 
     }
 }
