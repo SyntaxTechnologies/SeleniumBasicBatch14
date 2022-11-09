@@ -1,0 +1,83 @@
+*************Selenium Class 06 ***********
+
+
+*************** Handling Alerts in selenium *****************
+What is an alert?
+Alert is the popup message that u get on your application.
+Alert takes the focus of our main screen/page.
+We can  not proceed until we hvae handled this alert
+
+
+Types of alerts :
+1.WebBased Alerts/html Alerts:We can simply inspect them and deal with thim ina regular way
+2.javascript alerts :We can handle these alerts by using Alert interface in selenium.
+3.Window based alert: We can not handle them in selenium
+
+Types of JavaScript alerts:
+1. Simple Alert - click ok
+2. confirmation alert - either cancel or click ok
+3. prompt alert - enter text and then click ok
+
+To handle JS alerts we only have 4 methods
+1. accept() - click ok
+2. dismiss() - click cancel
+3. getText()
+4. sendKeys()
+
+Authentication alert:
+
+To handle authentication alerts we need to pass username and password in the URL
+ https://admin:admin@the-internet.herokuapp.com/basic_auth
+admin:admin
+password:admin
+
+*****************************Frames********************************
+Frame is a separate independent window in our webpage
+frames allow devs to represent multiple views on one page
+
+3 ways to interact with Frames:
+1. by index
+2. by name or ID
+3. by WebElement
+
+in alerts - switch manually to alert and switch automatically back
+in frames - switch manually to a frame and switch manually back to the main page
+
+
+***************review*****************
+
+1.WebBase or Html alerts --> inspect them and like deal with em ina  regular manner
+2.Java Script alert -->ca u inspect ? No!!!
+  how do u deal with them?
+   alert interface to deal with them.
+
+   Appraoch to use alert interface ?
+
+      once the alert appears
+
+      Alert X=driver.switchTo.alert();
+      x.Accept();
+      x.Dismiss();
+      X.sendleys();
+      x.getText();
+
+3.Window based Alert-- > No we can not handle them using selenium
+
+
+
+1. when ever we want to deal with an element inside a frame , can we appraoch it directly by standing on the main page?
+NO we can not
+
+2.appraoch to dela with an element isnide a frame
+  1.driver.SwitchTo.frame();
+  2.Then deal with that element;
+
+
+ XXX) Techniques to switch to a frame :
+ 1.By Index;   --> indexing starts from 0
+ 2. by Name or Id-->  the name and id in the tag  "as an attribute"   <iframe  name ="frame1"  ,id="abc">
+ 3.By Webelement -->
+     the arppraoch to swithc using webElement
+        1. to find the xpath if the frame
+        2. driver findElement (xpath)
+        3 driver.switchTO.frame(Webelement)

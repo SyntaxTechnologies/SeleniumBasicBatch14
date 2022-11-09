@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class ebayDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //       setting up the webDriver
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 //        create an instance
@@ -24,16 +24,16 @@ public class ebayDemo {
         driver.findElement(By.xpath("//input[@type='submit']")).click();
 
 //        verify the title
-
-
-        String title = driver.getTitle();
-
-        if(title.equalsIgnoreCase("Computers, Laptops, Tablets & Network Hardware for Sale - eBay")){
-            System.out.println("the title is verified");
-        }
-        else{
-            System.out.println("the title is incorrect");
-        }
+Thread.sleep(5000);
+        System.out.println(driver.findElement(By.xpath("//title")).getText());
+//        String title = driver.getTitle();
+//
+//        if(title.equalsIgnoreCase("Computers, Laptops, Tablets & Network Hardware for Sale - eBay")){
+//            System.out.println("the title is verified");
+//        }
+//        else{
+//            System.out.println("the title is incorrect");
+//        }
 
     }
 }
