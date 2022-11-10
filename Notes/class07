@@ -1,0 +1,67 @@
+****************Selenium Class07**************
+
+************** Window Handles*****************
+
+Handling multiple windows:
+In order to handle multiple windows we will be using:
+getWindowHandle()
+getWindowHandles()
+
+WindowHandle:
+is a unique ID that holds the address of the window or a tab
+It is approximately 40 alphanumeric character ID
+*************************Waits***************************************
+Synchronization:
+ is the process of bringing the speed of two or ore components to the same level
+ in this case we are bringing our script and page load to the same speed level
+
+ Thread.sleep() -- static wait / unconditional wait
+
+***************Implicit wait***************
+
+ Implicit wait:
+ it tells the webdriver to wait for a certain amount of time before throwing an exception
+ it will only be written once and will be applied to the whole session of the execution
+ We can say that implicit wait is a global wait
+
+ Implicit wait is usually set to 20 seconds. If your element is found in any time between the remaining
+ time, that time will be ignored and your script will move on to the next line or action
+
+ If the element is not found in a given time, ONLY then you will get an exception
+
+Syntax:
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+
+---.........Revision------------------
+Window Handles
+
+
+1.each window has a unique code --> window handle
+
+so we know that which window handle belongs to ehich window?
+No.
+
+
+driver .getWndowHandles ---> Set<String>
+
+in order to find our desired window handle we loop through each handle
+
+we switch to the first handle
+we get the title
+we see if it is our desired title
+if yes break ; if no continue
+
+
+
+-------------------------
+Implicit wait
+
+
+implicit wait is going to wait --> until --> The weBelement is found in DOM
+if teh web element is not found in the DOM  --> it will give us an exception No such element after TIME OUT
+
+------------
+
+
+
