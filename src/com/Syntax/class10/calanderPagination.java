@@ -34,17 +34,16 @@ public class calanderPagination {
         //click on it
         employeeListBtn.click();
 
-//        get all the ids from the columns
-
-        List<WebElement> columnID = driver.findElements(By.xpath("//table[@id='resultTable']/tbody/tr/td[2]"));
-
     boolean idFound=false;
  while(!idFound) {
+     //        get all the ids from the columns
+     List<WebElement> columnID = driver.findElements(By.xpath("//table[@id='resultTable']/tbody/tr/td[2]"));
      for (int i = 0; i < columnID.size(); i++) {
+
 //extract the id from the entry in list
          String id = columnID.get(i).getText();
 //            check if it is the desired id
-         if (id.equalsIgnoreCase("677373784498")) {
+         if (id.equalsIgnoreCase("40907A")) {
 //                check the checkbox associated with this particular  row
              System.out.println("i have found the id on row number " + (i + 1));
              WebElement checkBox = driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr[" + (i + 1) + "]/td[1]"));
@@ -55,7 +54,8 @@ public class calanderPagination {
 
      }
      if (!idFound){
-         System.out.println("clicking ont he next button");
+         WebElement nextButton = driver.findElement(By.xpath("//a[text()='Next']"));
+         nextButton.click();
      }
  }
 
