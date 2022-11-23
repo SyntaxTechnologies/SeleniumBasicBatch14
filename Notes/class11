@@ -1,0 +1,26 @@
+
+Why do we need screenshots in testing?
+in testing it is very important to take screenshots in order to prove the our test case
+covered certain functionality
+
+In selenium in order to take a screenshot we will be using
+TakesScreenshot interface
+
+Actions class:
+is given by selenium to capture keyboard and mouse events such as:
+Move to element
+Drag and drop
+double click
+right click
+
+POM -- Page Object Model
+is a design pattern which allows us to enhance test maintenance and reduce our code duplication
+
+Advantages of POM:
+1. Code reusability
+2. Code maintainability
+3. Object Repository
+4. Readibility
+
+
+
