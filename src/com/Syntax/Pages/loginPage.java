@@ -11,4 +11,5 @@ public class loginPage extends CommonMethods {
     public WebElement loginButton = driver.findElement(By.id("btnLogin"));
     public WebElement LoginSign = driver.findElement(By.xpath(" //div[text()='LOGIN Panel']"));
 
+
 }
