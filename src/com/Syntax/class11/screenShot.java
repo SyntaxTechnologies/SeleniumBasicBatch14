@@ -32,7 +32,7 @@ public class screenShot {
 //        screenshot is taken at this point
         File sourceFile = ss.getScreenshotAs(OutputType.FILE);
 //        save the file from your variable into the location into your computer
-        FileUtils.copyFile(sourceFile,new File("ss/myscreenshots/abc.png"));
+        FileUtils.copyFile(sourceFile,new File("/src/screenshots/abc.png"));
 
 
     }
